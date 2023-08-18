@@ -1,0 +1,1 @@
+<view class="tab"><scroll-view scroll-x="true" class="tab-scroll"><view class="tab-scroll-box"><view wx:for="{{a}}" wx:for-item="item" wx:key="b" class="tab-scroll-item">{{item.a}}</view></view></scroll-view><view class="tab-icon"><uni-icons wx:if="{{b}}" u-i="0157906a-0" bind:__l="__l" u-p="{{b}}"></uni-icons></view></view>
