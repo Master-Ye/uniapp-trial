@@ -1,8 +1,10 @@
 <template>
 	<view>
-		<view class="container">
+		<view class="home-container">
 			<NavBar></NavBar>
+
 			<TabBar :labelList="labelList"></TabBar>
+			<ArticlesList class="list-container" :labelList="labelList"></ArticlesList>
 		</view>
 	</view>
 </template>
@@ -11,7 +13,7 @@
 	export default {
 		data() {
 			return {
-labelList:[]
+				labelList: []
 			}
 		},
 		onLoad() {
@@ -19,12 +21,12 @@ labelList:[]
 		},
 		methods: {
 			initLabelList() {
-				
+
 				uniCloud.callFunction({
 					name: "getlist",
-					success:(res)=> {
+					success: (res) => {
 						console.log(res)
-						this.labelList=res.result.labelList
+						this.labelList = res.result.data
 					}
 				})
 			}
@@ -33,8 +35,25 @@ labelList:[]
 </script>
 
 <style scoped lang="scss">
-	.container {
-		@include flex;
-		color: $base-color
+	
+
+	page {
+		display: flex;
+		height: 100%;
+	}
+
+	.home-container {
+		flex: 1;
+		overflow: hidden;
+		box-sizing: border-box;
+		@include flex(flex-start, column);
+		align-items: inherit;
+		height: 100%;
+	}
+
+	.list-container {
+		flex: 1;
+		height: 100%;
+		box-sizing: border-box;
 	}
 </style>

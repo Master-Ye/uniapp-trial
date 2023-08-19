@@ -18,7 +18,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.f($props.labelList, (item, index, i0) => {
       return {
-        a: common_vendor.t(item),
+        a: common_vendor.t(item.name),
         b: index
       };
     }),

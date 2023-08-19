@@ -15,7 +15,7 @@ const _sfc_main = {
         name: "getlist",
         success: (res) => {
           console.log(res);
-          this.labelList = res.result.labelList;
+          this.labelList = res.result.data;
         }
       });
     }
@@ -24,16 +24,21 @@ const _sfc_main = {
 if (!Array) {
   const _easycom_NavBar2 = common_vendor.resolveComponent("NavBar");
   const _easycom_TabBar2 = common_vendor.resolveComponent("TabBar");
-  (_easycom_NavBar2 + _easycom_TabBar2)();
+  const _easycom_ArticlesList2 = common_vendor.resolveComponent("ArticlesList");
+  (_easycom_NavBar2 + _easycom_TabBar2 + _easycom_ArticlesList2)();
 }
 const _easycom_NavBar = () => "../../components/NavBar/NavBar.js";
 const _easycom_TabBar = () => "../../components/TabBar/TabBar.js";
+const _easycom_ArticlesList = () => "../../components/ArticlesList/ArticlesList.js";
 if (!Math) {
-  (_easycom_NavBar + _easycom_TabBar)();
+  (_easycom_NavBar + _easycom_TabBar + _easycom_ArticlesList)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.p({
+      labelList: $data.labelList
+    }),
+    b: common_vendor.p({
       labelList: $data.labelList
     })
   };

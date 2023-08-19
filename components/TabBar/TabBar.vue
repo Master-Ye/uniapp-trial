@@ -1,10 +1,11 @@
 <template>
-	<view class="tab">
+	<view class="tab" >
+		
 		<!--滚动区域 -->
 		<scroll-view scroll-x="true" class="tab-scroll">
 			<view class="tab-scroll-box">
 				<view class="tab-scroll-item" v-for="(item,index) in labelList" :key="index">
-					{{item}}
+					{{item.name}}
 				</view>
 			</view>
 		</scroll-view>
@@ -19,10 +20,10 @@
 		name:"TabBar",
 		props:{
 			labelList:Array
-		}
+		},
 	}
 </script>
 
-<style>
+<style lang="scss">
 	@import "./TabBar.scss"
 </style>

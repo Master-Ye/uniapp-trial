@@ -7,7 +7,7 @@ const _sfc_main = {
   },
   data() {
     return {
-      statusHeight: 20,
+      statusHeight: 40,
       marginRight: 0
     };
   },
@@ -19,7 +19,8 @@ const _sfc_main = {
     },
     getSystemInfo() {
       const systemInfo = common_vendor.index.getSystemInfoSync();
-      systemInfo.statusBarHeight && (this.statusHeight = systemInfo.statusBarHeight * 2);
+      this.statusHeight = systemInfo.statusBarHeight ? systemInfo.statusBarHeight * 2 : 20;
+      console.log(this.statusHeight);
       console.log(systemInfo);
       const menuButtonInfo = common_vendor.index.getMenuButtonBoundingClientRect();
       console.log(menuButtonInfo.top, menuButtonInfo.width);
@@ -45,7 +46,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     c: common_vendor.o(($event) => $options.goSearch()),
     d: $data.marginRight + "rpx",
-    e: $data.statusHeight + 85 + "rpx"
+    e: $data.statusHeight + 80 + "rpx"
   };
 }
 const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/j1813/Documents/HBuilderProjects/Project/components/NavBar/NavBar.vue"]]);

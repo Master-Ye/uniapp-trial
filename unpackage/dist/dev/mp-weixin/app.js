@@ -7,17 +7,7 @@ if (!Math) {
   "./pages/self/self.js";
   "./pages/search/search.js";
 }
-const _sfc_main = {
-  onLaunch: function() {
-    console.log("App Launch");
-  },
-  onShow: function() {
-    console.log("App Show");
-  },
-  onHide: function() {
-    console.log("App Hide");
-  }
-};
+const _sfc_main = {};
 const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "C:/Users/j1813/Documents/HBuilderProjects/Project/App.vue"]]);
 function createApp() {
   const app = common_vendor.createSSRApp(App);

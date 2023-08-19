@@ -24,11 +24,24 @@
 /* 透明度 */
 /* 文章场景相关 */
 /* 全局系统样式定义 */
-.container.data-v-1cf27b2a {
+page.data-v-1cf27b2a {
+  display: flex;
+  height: 100%;
+}
+.home-container.data-v-1cf27b2a {
+  flex: 1;
+  overflow: hidden;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: nowrap;
-  flex-direction: row;
-  color: #f25037;
+  flex-direction: column;
+  align-items: inherit;
+  height: 100%;
+}
+.list-container.data-v-1cf27b2a {
+  flex: 1;
+  height: 100%;
+  box-sizing: border-box;
 }

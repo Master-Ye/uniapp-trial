@@ -1,7 +1,9 @@
 import App from './App'
+// import module from './ajax/api/index.js'
 
 // #ifndef VUE3
 import Vue from 'vue'
+// Vue.prototype.$thhtp=module
 import './uni.promisify.adaptor'
 Vue.config.productionTip = false
 App.mpType = 'app'
@@ -13,10 +15,12 @@ app.$mount()
 
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
+
 export function createApp() {
   const app = createSSRApp(App)
   return {
     app
   }
 }
+
 // #endif
