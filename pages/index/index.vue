@@ -3,8 +3,8 @@
 		<view class="home-container">
 			<NavBar></NavBar>
 
-			<TabBar :labelList="labelList"></TabBar>
-			<ArticlesList class="list-container" :labelList="labelList"></ArticlesList>
+			<TabBar :labelList="labelList" :activeIndex="activeIndex" @changeIndex="changeIndex"></TabBar>
+			<ArticlesList @changeIndex="changeIndex" class="list-container" :labelList="labelList" :activeIndex="activeIndex"></ArticlesList>
 		</view>
 	</view>
 </template>
@@ -13,7 +13,8 @@
 	export default {
 		data() {
 			return {
-				labelList: []
+				labelList: [],
+				activeIndex:0
 			}
 		},
 		onLoad() {
@@ -29,6 +30,17 @@
 						this.labelList = res.result.data
 					}
 				})
+			},
+			changeIndex(index){
+				this.activeIndex=index
+				console.log(index)
+				
+				
+				
+				
+				
+				
+				
 			}
 		}
 	}
